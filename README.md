@@ -1,50 +1,127 @@
-# Welcome to your Expo app 👋
+# 📱 Todo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile task management application (TODO) developed with modern technologies that allows you to create, edit, complete, and delete tasks. The application runs on iOS, Android, and web.
 
-## Get started
+## 🚀 Quick Start
 
-1. Install dependencies
+### Prerequisites
+
+- Node.js and npm installed
+- Expo CLI (can be installed globally or use npx)
+
+### Installation
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
-
+2. Start the application:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+In the output, you'll find options to open the app in:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- [Expo Go](https://expo.dev/go) - Sandbox for rapid development
+- [Web browser](https://docs.expo.dev/workflow/web/)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Available Commands
 
 ```bash
-npm run reset-project
+npm start          # Start the development server
+npm run android    # Open in Android emulator
+npm run ios        # Open in iOS simulator
+npm run web        # Open in web browser
+npm run lint       # Run ESLint linter
+npm run reset-project  # Reset the project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Technologies Used
 
-## Learn more
+### Frontend
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Expo** (~54.0.33) - Framework for React Native app development
+- **React Native** (0.81.5) - Cross-platform mobile development framework
+- **React** (19.1.0) - Base UI library
+- **Expo Router** (~6.0.23) - File-based routing
+- **React Navigation** - Navigation and tabs system
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Backend
 
-## Join the community
+- **Convex** (^1.35.1) - Serverless backend with real-time database
 
-Join our community of developers creating universal apps.
+### Storage and Data
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- `@react-native-async-storage/async-storage` - Local persistent storage
+
+### Animations and Interactivity
+
+- `react-native-reanimated` - Optimized animations
+- `react-native-gesture-handler` - Gesture handling
+- `expo-haptics` - Haptic feedback
+- `expo-linear-gradient` - Visual gradients
+
+### UI and Components
+
+- `@expo/vector-icons` - Vector icons
+- `expo-image` - Optimized image component
+- `react-native-web` - Web support
+
+### Development Tools
+
+- **TypeScript** (~5.9.2) - Static typing
+- **ESLint** (^9.25.0) - Code linter
+- **eslint-config-expo** - Recommended configuration
+
+## 📁 Project Structure
+
+```
+app/                    # Application screens
+├── _layout.tsx        # Main layout
+└── (tabs)/            # Tab navigation
+    ├── index.tsx      # Main tasks screen
+    └── settings.tsx   # Settings screen
+
+components/            # Reusable components
+├── TodoInput.tsx      # New task input
+├── ProgressStats.tsx  # Progress statistics
+├── Preferences.tsx    # User preferences
+├── Header.tsx         # Header component
+├── EmptyState.tsx     # Empty state
+├── LoadingSpinner.tsx # Loading spinner
+└── DangerZone.tsx     # Dangerous actions
+
+convex/               # Serverless backend
+├── schema.ts         # Database schema
+├── todos.ts          # Backend functions (queries and mutations)
+└── _generated/       # Auto-generated code
+
+hooks/               # Custom hooks
+└── useTheme.tsx      # Theme management
+
+assets/              # Static assets
+├── images/          # Icons and splash screens
+└── styles/          # Shared styles
+```
+
+## ✨ Main Features
+
+- ✅ Create, edit, and delete tasks
+- ✅ Mark tasks as completed
+- ✅ Real-time database with Convex
+- ✅ Tab navigation (Home and Settings)
+- ✅ Automatic light/dark theme
+- ✅ Persistent storage
+- ✅ Compatible with iOS, Android, and Web
+- ✅ Modern and responsive interface
+
+## 📚 Additional Resources
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [Convex Documentation](https://docs.convex.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [Expo Router Guide](https://docs.expo.dev/router/introduction/)
